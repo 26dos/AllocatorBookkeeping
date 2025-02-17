@@ -1,0 +1,59 @@
+Pledge Logic:
+
+A. Public Dataset:
+
+1.Submit Application Form:
+The maximum size of a single application form is 2PB.
+The application form should contain complete information and substantial sample data.
+
+2.Allocator Review:
+The allocator reviews the application form. Upon approval, based on the customer scale, 10-50TB will be allocated for the Service Provider (SP) to perform encapsulation verification.
+
+3.Data Verification:
+The SP downloads and verifies the public dataset. If the data content and node match the application form, the customer is notified to proceed with the pledge.
+
+4.Client Pledge:
+The client pledges FIL based on the application amount. The maximum application amount is 2PB, and the client must pledge FIL corresponding to the remaining balance in a single transaction.
+
+5.Signing and Encapsulation:
+The allocator signs off, and the SP performs the encapsulation.
+
+*Pledge Cycle:
+The pledge cycle for public datasets is 20 days. The rate is 10TB = 1 FIL, and the pledge is automatically returned to the pledge address upon maturity.
+
+6.Reapplication:
+If the client has more data, they can submit a new application form (each form cannot exceed 2PB). Trusted clients can skip the review process, but any updates must be disclosed in advance.
+
+
+B. Private Data:
+
+1.Submit Application Form:
+The maximum size of a single application form is 1PB.
+
+2.Allocator Review:
+The allocator reviews the application form, focusing on verifying the customer's identity and the corresponding SP information.
+
+3.Client Pledge:
+Upon approval, the allocator notifies the customer to pledge the requested amount.
+
+4.Signing and Encapsulation:
+The allocator signs off, and the SP performs the encapsulation.
+
+*Pledge Cycle:
+The pledge cycle for private data is 40 days. The rate is 10TB = 1.5 FIL, and the pledge is automatically returned to the pledge address upon maturity.
+
+5.Reapplication:
+If the client has more data, they can submit a new application form (each form cannot exceed 1PB). Trusted clients can skip the review process, but any updates must be disclosed in advance.
+
+C.Penalty Logic
+
+I. Automated Penalties (Automated staking token deductions through smart contracts)
+	1.	When more than 50% of the encapsulated nodes have a 0% retrieval rate, 10% of the current staked tokens will be penalized.
+	2.	When the average retrieval rate of the encapsulated nodes is lower than 30%, 10% of the current staked tokens will be penalized.
+	3.	When data sharing occurs, 10% of the current staked tokens will be penalized.
+
+II. Manual Penalties (Deductions through calling smart contract API interfaces)
+	1.	When the Allocator administrator reviews non-compliance, they will make their own judgment and deduct the staked tokens.
+
+III. Manual Return of Staked Tokens
+	1.	When the Allocator administrator finds an incorrect deduction of staked tokens, or when the applicant successfully appeals, the staked tokens will be returned.
